@@ -45,11 +45,22 @@
     <version>2.13.0</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-core</artifactId>
+    <version>3.2.4</version>
+    <scope>test</scope>
+</dependency>
+
+
 
   </dependencies>
   
   <modules>
   <module>springDemo_data</module>
+  <module>springDemo_service</module>
+  <module>springDemo_web</module>
   </modules>
   
 </project>

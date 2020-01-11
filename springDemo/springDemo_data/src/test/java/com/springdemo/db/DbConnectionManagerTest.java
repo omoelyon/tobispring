@@ -20,11 +20,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 /**
- * @author user
+ * @author oluwatobi
  *
  */
-
-
 @ContextConfiguration("classpath:/springDemo-data-context.xml")
 @RunWith(SpringRunner.class)
 public class DbConnectionManagerTest {
@@ -33,8 +31,6 @@ public class DbConnectionManagerTest {
 	
 	@Autowired
 	private ComboPooledDataSource dataSource;
-	
-	
 	
 	/**
 	 * @throws java.lang.Exception
@@ -63,13 +59,15 @@ public class DbConnectionManagerTest {
 			logger.info("Getting connection to the database");
 			
 			Connection mycon = DriverManager.getConnection(jdbcUrl, user, password);
-			System.out.println("Connection successful!" + jdbcUrl );
+			
+			logger.info("Connection to the database successful" + jdbcUrl);
 			
 			assertNotNull(mycon);
 			
 		}
 		catch(SQLException e) {
 			
+			logger.warning("Error connecting to the database");
 		}
 		
 		

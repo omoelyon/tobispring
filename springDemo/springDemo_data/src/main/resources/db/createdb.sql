@@ -8,6 +8,6 @@ create database springDemoDB;
 
 use springDemoDB;
 
-grant all privileges on springDemoDB to 'springdemouser'@'localhost';
+grant all privileges on springDemoDB.* to 'springdemouser'@'localhost';
 
 flush privileges;
