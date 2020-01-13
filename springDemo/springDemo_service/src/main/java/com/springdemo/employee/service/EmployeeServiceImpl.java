@@ -11,7 +11,19 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 	@Autowired
 	private EmployeeDao employeeDaoImpl;
+	private String pool;
 	
+	
+	public String getPool() {
+		return pool;
+	}
+
+
+	public void setPool(String pool) {
+		this.pool = pool;
+	}
+
+
 	public void addEmployee(Employee employee) {
 		// TODO Auto-generated method stub
 		employeeDaoImpl.addEmployee(employee);
