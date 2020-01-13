@@ -20,6 +20,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 
 	public void setPool(String pool) {
+		System.out.print("it worked");
 		this.pool = pool;
 	}
 
